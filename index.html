@@ -12,13 +12,13 @@
 
     <nav>
         <div id="backToMain">
-            <a href="">&lt;Sebastian /&gt;</a>
+            <a href="index.html">&lt;Sebastian /&gt;</a>
         </div>
         <div id="navigation">
-            <a href="">O mnie</a>
-            <a href="">Doświadczenie</a>
-            <a href="">Projekty</a>
-            <a href="">Kontakt</a>
+            <a href="index.html">O mnie</a>
+            <a href="#stats">Doświadczenie</a>
+            <a href="#projects">Projekty</a>
+            <a href="#contact">Kontakt</a>
         </div>
     </nav>
 
@@ -37,10 +37,10 @@
             Uczę się robić gry w <strong>Unreal Engine używajac C++</strong>, szczególnie <br> interesując się Gameplayem. Mam również spore doświadczenie <br> w tworzeniu nowoczesnych, responsywnych aplikacji <br> i stron internetowych (JS, React, HTML5/CSS3).
         </p>
         <div class="btn-group">
-            <a href="" class="btn btn-primary">
+            <a href="https://github.com/DZIKU77?tab=repositories" target="_blank" class="btn btn-primary">
                 Zobacz moje projekty!
             </a>
-            <a href="" class="btn btn-outline">
+            <a href="mailto:sebed1234@gmail.com" class="btn btn-outline">
                 Napisz do mnie
             </a>
         </div>
@@ -48,7 +48,7 @@
 
     <div class="container">
         <!-- Statystyki / Key Metrics -->
-        <section class="stats-section">
+        <section class="stats-section" id="stats">
             <div class="stat-card">
                 <div class="stat-number" data-target="16">0</div>
                 <div class="stat-label">Wiek (Pasja od najmłodszych lat)</div>
@@ -177,9 +177,45 @@
             </div>
         </section>
 
+        <!-- Sekcja Kontaktowa z efektem Terminala -->
+        <section id="contact">
+            <h2 class="section-title"><span>03.</span> Kontakt</h2>
+            <hr color="darkred">
+            
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">contact_session.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="term-line"><span class="term-user">user@portfolio</span>:<span class="term-path">~</span>$ ./get_contact_info.sh</p>
+                    <p class="term-output">STATUS: Szukam praktyk komercyjnych (Junior Game / C++ / Unreal Engine)</p>
+                    <p class="term-output">LOCATION: Polska / Rzeszów</p>
+                    <p class="term-output">EMAIL: sebed1234@gmail.com</p>
+                    <p class="term-output">GITHUB: github.com/DZIKU77</p>
+                    <p class="term-line"><span class="term-user">user@portfolio</span>:<span class="term-path">~</span>$ <span class="blink">_</span></p>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="mailto:sebed1234@gmail.com" class="btn btn-primary">
+                        Wyślij wiadomość E-mail
+                    </a>
+                    <a href="https://github.com/DZIKU77" target="_blank" class="btn btn-outline">
+                        Profil GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
         
     </div>
 
+    <footer>
+        Strona portfolio stworzona przez i dotycząca Sebastiana Bednarza &copy; 2026 <br>
+        Strona zrobiona w celu uzyskania zaufania i pokazanie umiejetnosci podczas aplikacji na praktyki zawodowe <br>
+        Wsystkie potrzebne linki i informacje sa zamieszczone na stronie :)
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
