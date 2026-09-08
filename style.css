@@ -211,9 +211,16 @@ p.hero-sub {
     margin-top: 4px;
 }
 
+.container{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Skills */
 .skills-grid {
-    position: absolute;
     display: flex;
     max-width: 900px;
     justify-content: center;
@@ -221,12 +228,16 @@ p.hero-sub {
     gap: 20px;
 }
 
+#skils{
+    max-width: 900px;
+}
+
 .skill-card {
     background: rgba(128, 0, 0, 0.219);
     border: 1px solid #f3f4f64b;
     border-radius: 14px;
     padding: 22px;
-    width: 200px;
+    width: 180px;
     height: 150px;
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -265,4 +276,77 @@ p.hero-sub {
 
 .section-title span{
     color: rgba(109, 0, 0, 0.842);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.project-card {
+    background: rgba(128, 0, 0, 0.219);
+    border: 1px solid rgba(241, 99, 99, 0.2);
+    border-radius: 18px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #ef4444;
+    box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.6);
+}
+
+.project-card.featured {
+    border-color: rgba(239, 68, 68, 0.5);
+    background: linear-gradient(180deg, rgb(39, 17, 17) 0%, rgb(37, 15, 15) 100%);
+}
+
+.project-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.project-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.copy-btn{
+    background: #f3f4f64b;
+}
+
+.project-desc {
+    color: #9ca3af;
+    margin-bottom: 20px;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tech-tag {
+    background: rgba(241, 99, 99, 0.1);
+    color: #fca5a5;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid rgba(241, 99, 99, 0.2);
 }

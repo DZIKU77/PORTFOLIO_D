@@ -77,3 +77,45 @@ function animateStats() {
 
 window.addEventListener('scroll', animateStats);
 animateStats();
+
+// 3. Efekt 3D Tilt na Kartach (Lekkie odchylanie przy najechaniu myszką)
+    const cards = document.querySelectorAll('.tilt-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        });
+    });
+
+    // 4. Kopiowanie linku do schowka z informacją powiadomienia
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    copyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const link = btn.getAttribute('data-link');
+            navigator.clipboard.writeText(link).then(() => {
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Skopiowano!';
+                btn.style.borderColor = '#10b981';
+                btn.style.color = '#10b981';
+
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                }, 2000);
+            });
+        });
+    });
