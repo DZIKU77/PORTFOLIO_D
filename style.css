@@ -5,6 +5,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #f3f4f6;
 }
 
 html{
@@ -114,4 +115,70 @@ header{
     0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(241, 99, 99, 0.7); }
     70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(241, 99, 99, 0); }
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(241, 99, 99, 0); }
+}
+
+/* Typeout text */
+.cursor {
+  font-weight: 300;
+  color: #fca5a5;
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-title{
+    font-size: 50px;
+}
+
+p.hero-sub {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto 36px;
+}
+
+/* Hero / Buttons */
+.btn-group{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary{
+    background: rgba(109, 0, 0, 0.842);
+    color: #f3f4f6;
+}
+
+.btn-outline{
+    border: 0.5px solid #f3f4f6;
+    color: #f3f4f6;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+.btn-outline:hover{
+    background: #f3f4f64b;
+}
+
+.btn-primary:hover{
+    background: rgba(128, 0, 0, 0.842);
 }
